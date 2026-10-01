@@ -1,16 +1,17 @@
-name: variables
-on: 
-  workflow_dispatch: 
-   inputs:
-    environment:
-     description: Select environment
-     required: true
-     default: dev
-     type: choice
-     options:
-       - dev
-       - test
-       - UAT
+name: test-1
+on:
+  workflow_dispatch:
+     inputs:
+       environment:
+         description: Select environment 
+         required: true
+         default: dev
+         type: choice
+         options:
+           - dev
+           - test
+           - UAT
+           - prod
 jobs:
   job1:
     env:
@@ -20,6 +21,7 @@ jobs:
       - name: "env variables"
         run: |
          echo " my name is $MY_NAME"
+         echo " this is uploaded by ${{inputs.environment}} "
          pwd
          hostname
   job2:
@@ -28,8 +30,8 @@ jobs:
     steps:
       - name: " printing name"
         run: |
-          echo " print ${{github.ref.name}}
-          echo " this workflow is run by ${{github.actor_id}}
+          echo " print ${{github.ref.name}} "
+          echo " this workflow is run by ${{github.actor_id}} "
           pwd
       
       
