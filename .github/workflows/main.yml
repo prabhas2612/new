@@ -26,6 +26,10 @@ jobs:
         run: |
          echo " my name is $MY_NAME"
          echo " this is uploaded by ${{inputs.environment}} and the tag is ${{inputs.artifact_tag}}"
+         if: ${{inputs.environment}} == 'dev' || 'UAT' || 'prod'
+         echo " this is legit to trigger"
+         else:
+         echo " this is not legit"
          pwd
          hostname
   job2:
