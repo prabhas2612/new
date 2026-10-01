@@ -30,7 +30,7 @@ jobs:
            echo " this is legit to trigger"
          else:
            echo " this is not legit"
-          fi
+          
   job2:
     needs: job1
     runs-on: ubuntu-latest
