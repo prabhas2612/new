@@ -1,0 +1,12 @@
+name: practise
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+     - name: just practise
+       run: |
+         echo " hostname"
+         echo " pwd"
+         pwd
+         hostname
