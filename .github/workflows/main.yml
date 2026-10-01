@@ -7,15 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "env variables"
-        run: echo " my name is $MY_NAME"
-        
+        run: |
+         echo " my name is $MY_NAME"
+         pwd
+         hostname
   job2:
     needs: job1
     runs-on: ubuntu-latest
     steps:
       - name: " printing name"
         run: |
-          echo " print {{github_ref-name}}
+          echo " print {{github.ref-name}}
+          echo " this workflow is run by {{github.actor}}
           pwd
       
       
