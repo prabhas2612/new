@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: " printing name"
         run: |
-          echo " print {{github.ref-name}}
-          echo " this workflow is run by {{github.actor}}
+          echo " print ${{github.ref.name}}
+          echo " this workflow is run by ${{github.actor}}
           pwd
       
       
