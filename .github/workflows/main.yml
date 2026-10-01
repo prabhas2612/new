@@ -12,8 +12,12 @@ on:
            - test
            - UAT
            - prod
+       artifact_tag: 
+        description: select tag to deploy
+        required: true
+        type: string
 jobs:
-  job1:
+  job1: 
     env:
      MY_NAME: "prabhas"
     runs-on: ubuntu-latest
@@ -21,7 +25,7 @@ jobs:
       - name: "env variables"
         run: |
          echo " my name is $MY_NAME"
-         echo " this is uploaded by ${{inputs.environment}} "
+         echo " this is uploaded by ${{inputs.environment}} and the tag is ${{inputs.artifact_tag}}"
          pwd
          hostname
   job2:
