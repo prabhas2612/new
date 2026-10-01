@@ -37,7 +37,7 @@ jobs:
       - name: " printing name"
         run: |
           echo " print ${{github.sha}} "
-          if [ $MY_NAME == "prabhas" ]; then
+          if [ "$MY_NAME" = "prabhas" ]; then
            echo " he is the owner"
           else:
            echo " workers not allowed"
