@@ -27,7 +27,7 @@ jobs:
          echo " my name is $MY_NAME"
          echo " this is uploaded by ${{inputs.environment}} and the tag is ${{inputs.artifact_tag}}"
          if:  ${{inputs.environment}} == 'dev'  ||  ${{inputs.artifact_tag}} == 'v2' 
-           echo " this is legit to trigger"
+         run: echo " this is legit to trigger"
           
   job2:
     needs: job1
