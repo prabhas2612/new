@@ -27,7 +27,7 @@ jobs:
          echo " my name is $MY_NAME"
          echo " this is uploaded by ${{inputs.environment }} and the tag is ${{inputs.artifact_tag}}"
       - name: " to run the trigger"
-        if: ${{inputs.environment == 'dev' && inputs.artifact_tag == 'v2' }}
+        if: ${{inputs.environment == 'dev' && inputs.artifact_tag == 'v2'  }}  
         run: echo " this is legit to trigger"
           
   job2:
@@ -37,6 +37,11 @@ jobs:
       - name: " printing name"
         run: |
           echo " print ${{github.sha}} "
+          if [ $MY_NAME == 'prabhas']
+          run: echo " he is the owner"
+          else:
+          run: echo " workers not allowed"
+          fi
           echo " this workflow is run by ${{github.actor_id}} "
           pwd
       
