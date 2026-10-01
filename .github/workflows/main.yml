@@ -13,9 +13,9 @@ on:
            - UAT
            - prod
        artifact_tag: 
-        description: select tag to deploy
-        required: true
-        type: string
+         description: select tag to deploy
+         required: true
+         type: string
 env:
   MY_NAME: "prabhas"
 jobs:
