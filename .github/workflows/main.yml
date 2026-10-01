@@ -1,5 +1,16 @@
 name: variables
-on: push
+on: 
+  workflow_dispatch: 
+   inputs:
+    environment:
+     description: Select environment
+     required: true
+     default: dev
+     type: choice
+     options:
+       - dev
+       - test
+       - UAT
 jobs:
   job1:
     env:
@@ -18,7 +29,7 @@ jobs:
       - name: " printing name"
         run: |
           echo " print ${{github.ref.name}}
-          echo " this workflow is run by ${{github.actor}}
+          echo " this workflow is run by ${{github.actor_id}}
           pwd
       
       
