@@ -31,8 +31,6 @@ jobs:
          else:
            echo " this is not legit"
           fi
-         pwd
-         hostname
   job2:
     needs: job1
     runs-on: ubuntu-latest
