@@ -7,10 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "env variables"
-        run: |
-         echo: " my name is $MY_NAME"
-         pwd
-         hostname
+        run: echo " my name is $MY_NAME"
+        
   job2:
     needs: job1
     runs-on: ubuntu-latest
