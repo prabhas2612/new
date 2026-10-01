@@ -3,12 +3,12 @@ on: push
 jobs:
   job1:
     env:
-     NAME: "prabhas"
+     MY_NAME: "prabhas"
     runs-on: ubuntu-latest
     steps:
       - name: "env variables"
         run: |
-         echo: " my name is $NAME"
+         echo: " my name is $MY_NAME"
          pwd
          hostname
   job2:
