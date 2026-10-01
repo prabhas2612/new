@@ -38,9 +38,9 @@ jobs:
         run: |
           echo " print ${{github.sha}} "
           if [ $MY_NAME == 'prabhas']; then
-          run: echo " he is the owner"
+           echo " he is the owner"
           else:
-          run: echo " workers not allowed"
+           echo " workers not allowed"
           fi
           echo " this workflow is run by ${{github.actor_id}} "
           pwd
