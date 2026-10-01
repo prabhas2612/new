@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: " printing name"
         run: |
-          echo " print ${{github.ref.name}} "
+          echo " print ${{github.sha}} "
           echo " this workflow is run by ${{github.actor_id}} "
           pwd
       
