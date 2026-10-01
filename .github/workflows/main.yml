@@ -7,6 +7,25 @@ jobs:
      - name: just practise
        run: |
          echo " hostname"
-         echo " pwd"
+         echo " "
          pwd
          hostname
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: do not practise
+        run: |
+          echo " i am not practising"
+          pwd
+          hostname
+  job3:
+    needs: job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: i am not practising
+        run: |
+          echo " do not practise"
+          free -h
+          pwd
+      - 
