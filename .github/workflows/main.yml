@@ -41,6 +41,7 @@ jobs:
            echo " he is the owner"
           else
            echo " workers not allowed"
+           fi
           echo " this workflow is run by ${{github.actor_id}} "
           pwd
       
